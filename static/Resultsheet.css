@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('../static/Assets/bg_img3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+  
+  }
+  
+  .navbar {
+    background-color: rgba(248, 249, 250, 0.5);
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 100%;
+    max-height: 7vh;
+    box-sizing: border-box;
+  }
+  
+  .navbar-container {
+    display: contents;
+    align-items: center;
+  }
+  
+  .navbar-image {
+    height: 40px;
+    margin-right: 1em;
+    border-radius: 50%;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .navbar-link {
+    margin-right: 1em;
+    cursor: pointer;  
+    /* transition: background-color 0.3s ease; */
+  }
+  
+  .navbar-link a {
+    text-decoration: none;
+    color: #000000;
+    transition: background-color 0.3s ease;
+    
+  }
+  .navbar-links :hover{
+      color: #1f6d8e;
+      text-decoration-line: underline;
+      text-underline-offset: 0.5rem;
+  }
+  
+  .navbar-buttons .navbar-action {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-buttons .navbar-action a {
+    text-decoration: none;
+    color: white;
+  
+  }
+  
+  .navbar-buttons .navbar-action:hover {
+    background-color: #1f8e41;
+  }
+
+  /* ********************************** */
+
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.3);
+    width: 100%;    
+    /* height: 100%; */
+    max-height: 93vh;
+    border-radius: 20px;
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
+  
+  }
+  .hero-content {
+    width: 98%;
+    max-height: 95vh;
+    margin-bottom: 3%;
+  }
+  .hero-text1{
+    color: rgb(14, 96, 87);
+    padding: 1% 0 0 0 ;
+    border-bottom: 2px solid #000000; 
+    
+  }
+  .hero-text2{
+    color: rgb(22, 96, 133);
+    padding-bottom: 1%;
+    font-weight: bold;
+    font-size: 18px;
+    /* border-bottom: 2px solid #000000;  */
+    
+  }
+  
+  
+
+  /* ********************************** */
+
+
+  /* ********************************** */
+
+.plot-container {
+    max-width: 100%;
+    margin: auto;
+    overflow-y: auto;
+    max-height: 70vh;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.plot-item {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.plot-item img {
+    width: 100%;
+    height: auto;
+}
+
+.plot-item .plot-text {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}

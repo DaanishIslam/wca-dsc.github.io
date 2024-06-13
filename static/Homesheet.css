@@ -1,0 +1,594 @@
+/* Add some basic styles for minimalism and responsiveness */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('../static/Assets/bg_img3.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  color: #000000;
+
+}
+
+.navbar {
+  background-color: rgba(248, 249, 250, 0.5);
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: contents;
+  align-items: center;
+}
+
+.navbar-image {
+  height: 40px;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* transition: background-color 0.3s ease; */
+}
+
+.navbar-link {
+  margin-right: 1em;
+  cursor: pointer;  
+  /* transition: background-color 0.3s ease; */
+}
+
+.navbar-link a {
+  text-decoration: none;
+  color: #000000;
+  transition: background-color 0.3s ease;
+  
+}
+.navbar-links :hover{
+    color: #1f8e41;
+    text-decoration-line: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.navbar-buttons .navbar-action {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons .navbar-action a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.navbar-buttons .navbar-action:hover {
+  background-color: #1f8e41;
+}
+.navbar-action:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255,255,255, 0.5);
+  width: 40%;
+  margin: 10vh 0 0 30%;
+  padding: 0% 0 2% 0;
+  border-radius: 20px;
+  /* color: white; */
+
+}
+.hero-text1{
+  color: rgb(14, 96, 87);
+  padding-bottom: 1%;
+  border-bottom: 2px solid #000000; 
+  
+}
+.hero-text2{
+  color: rgb(22, 96, 133);
+  padding-bottom: 1%;
+  font-weight: bold;
+  font-size: 18px;
+  /* border-bottom: 2px solid #000000;  */
+  
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+
+.form-data{
+  padding-top: 60px;
+}
+
+.input-file-container {
+  margin-top: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input {
+  width: 100%;
+  padding: 1em;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  align-content: center;
+}
+
+.file-input:hover {
+  background-color: #0056b3;
+}
+
+.hero-button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 10em;
+  height: 2em;
+  font-size: 16px;
+}
+
+
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
+
+.exe-button{
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #0981bcd0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 20em;
+  height: 3em;
+  font-size: 16px;
+}
+
+.exe-button:disabled {
+  background-color: #cccccc; /* Light grey background to indicate disabled state */
+  color: #666666; /* Darker grey text color */
+  cursor: not-allowed; /* Change cursor to indicate that the button is not interactive */
+  
+}
+.exe-button:disabled:hover {
+  background-color: #cccccc; /* Ensure no hover effect on disabled button */
+  color: #666666; /* Keep text color consistent with disabled state */
+  cursor: not-allowed; /* Keep cursor indication */
+}
+
+.exe-button:hover {
+  background-color: #1f6d8e;
+}
+.exe-button:active {
+  color: #666;
+  box-shadow: inset 2px 2px 10px #c5c5c5, inset -4px -4px 12px #bdcdd1;
+}
+
+
+
+#message-container{
+  padding-top: 10% ;
+}
+
+.flashes {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.flash {
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+
+.flash.success {
+  background-color: #28a745;
+}
+
+.flash.error {
+  background-color: #dc3545;
+}
+
+
+/** Style for the custom loading */
+
+.loader {
+  display: none; /* Hide loader by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: dark overlay */
+  z-index: 1000;
+}
+
+/* .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.socket {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
+  /* transform: translate(-50%, -50%); */
+
+}
+
+.hex-brick {
+  background: #000000;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 5px;
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.h2 {
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+}
+
+.h3 {
+  transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.gel {
+  height: 30px;
+  width: 30px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.center-gel {
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.c1 {
+  margin-left: -47px;
+  margin-top: -15px;
+}
+
+.c2 {
+  margin-left: -31px;
+  margin-top: -43px;
+}
+
+.c3 {
+  margin-left: 1px;
+  margin-top: -43px;
+}
+
+.c4 {
+  margin-left: 17px;
+  margin-top: -15px;
+}
+
+.c5 {
+  margin-left: -31px;
+  margin-top: 13px;
+}
+
+.c6 {
+  margin-left: 1px;
+  margin-top: 13px;
+}
+
+.c7 {
+  margin-left: -63px;
+  margin-top: -43px;
+}
+
+.c8 {
+  margin-left: 33px;
+  margin-top: -43px;
+}
+
+.c9 {
+  margin-left: -15px;
+  margin-top: 41px;
+}
+
+.c10 {
+  margin-left: -63px;
+  margin-top: 13px;
+}
+
+.c11 {
+  margin-left: 33px;
+  margin-top: 13px;
+}
+
+.c12 {
+  margin-left: -15px;
+  margin-top: -71px;
+}
+
+.c13 {
+  margin-left: -47px;
+  margin-top: -71px;
+}
+
+.c14 {
+  margin-left: 17px;
+  margin-top: -71px;
+}
+
+.c15 {
+  margin-left: -47px;
+  margin-top: 41px;
+}
+
+.c16 {
+  margin-left: 17px;
+  margin-top: 41px;
+}
+
+.c17 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c18 {
+  margin-left: 49px;
+  margin-top: -15px;
+}
+
+.c19 {
+  margin-left: -63px;
+  margin-top: -99px;
+}
+
+.c20 {
+  margin-left: 33px;
+  margin-top: -99px;
+}
+
+.c21 {
+  margin-left: 1px;
+  margin-top: -99px;
+}
+
+.c22 {
+  margin-left: -31px;
+  margin-top: -99px;
+}
+
+.c23 {
+  margin-left: -63px;
+  margin-top: 69px;
+}
+
+.c24 {
+  margin-left: 33px;
+  margin-top: 69px;
+}
+
+.c25 {
+  margin-left: 1px;
+  margin-top: 69px;
+}
+
+.c26 {
+  margin-left: -31px;
+  margin-top: 69px;
+}
+
+.c27 {
+  margin-left: -79px;
+  margin-top: -15px;
+}
+
+.c28 {
+  margin-left: -95px;
+  margin-top: -43px;
+}
+
+.c29 {
+  margin-left: -95px;
+  margin-top: 13px;
+}
+
+.c30 {
+  margin-left: 49px;
+  margin-top: 41px;
+}
+
+.c31 {
+  margin-left: -79px;
+  margin-top: -71px;
+}
+
+.c32 {
+  margin-left: -111px;
+  margin-top: -15px;
+}
+
+.c33 {
+  margin-left: 65px;
+  margin-top: -43px;
+}
+
+.c34 {
+  margin-left: 65px;
+  margin-top: 13px;
+}
+
+.c35 {
+  margin-left: -79px;
+  margin-top: 41px;
+}
+
+.c36 {
+  margin-left: 49px;
+  margin-top: -71px;
+}
+
+.c37 {
+  margin-left: 81px;
+  margin-top: -15px;
+}
+
+.r1 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .2s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .2s;
+}
+
+.r2 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .4s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .4s;
+}
+
+.r3 {
+  animation-name: pulse00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+  -webkit-animation-name: pulse00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .6s;
+}
+
+.r1 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .2s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .2s;
+}
+
+.r2 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .4s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .4s;
+}
+
+.r3 > .hex-brick {
+  animation-name: fade00;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .6s;
+  -webkit-animation-name: fade00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: .6s;
+}
+
+@keyframes pulse00 {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.01);
+    transform: scale(0.01);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes fade00 {
+  0% {
+    background: #25D366; /* Bright Green */
+  }
+
+  50% {
+    background: #075E54; /* Dark Green */
+  }
+
+  100% {
+    background: #128C7E; /* Medium Green */
+  }
+}
+

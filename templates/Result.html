@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot Result</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon2.jpg') }}" type="image/x-icon">
+    <link href="{{ url_for('static', filename='Resultsheet.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{{ url_for('home') }}" class="portfolio-logo">
+                <img src="{{ url_for('static', filename='Assets/wapplogo.jpeg') }}" alt="Navbar Image"
+                    class="navbar-image">
+            </a>
+            <ul class="navbar-links">
+                <li class="navbar-link"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <button class="navbar-action"><a href="/portfolio" class="portfolio-link">Portfolio</a></button>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-text1">Plot Results</h1>
+            <div class="plot-container">
+                {% for plot_file in plot_files %}
+                <div class="plot-item">
+                    <!-- <p>URL: {{ url_for('serve_file', filename=plot_file) }}</p> -->
+                    <!-- Embed the HTML plot using an iframe -->
+                    <iframe src="{{ url_for('serve_file', filename=plot_file) }}" 
+                            width="95%" 
+                            height="600px" 
+                            style="overflow-y: hidden;" 
+                            frameborder="0" 
+                            onerror="this.onerror=null; this.src='data:text/html,Error loading plot';">
+                    </iframe>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Custom Loader: Very Long code for loader -->
+    <div class="loader">
+
+        <div class="socket">
+            <div class="gel center-gel">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c1 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c2 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c3 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c4 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c5 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c6 r1">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+
+            <div class="gel c7 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+
+            <div class="gel c8 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c9 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c10 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c11 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c12 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c13 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c14 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c15 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c16 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c17 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c18 r2">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c19 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c20 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c21 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c22 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c23 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c24 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c25 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c26 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c28 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c29 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c30 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c31 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c32 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c33 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c34 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c35 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c36 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+            <div class="gel c37 r3">
+                <div class="hex-brick h1"></div>
+                <div class="hex-brick h2"></div>
+                <div class="hex-brick h3"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Very Long code for loader -->
+</body>
+
+</html>
