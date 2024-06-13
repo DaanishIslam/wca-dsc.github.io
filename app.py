@@ -55,7 +55,7 @@ def home():
     print("\nBase dir: ", BASE_DIR)
     print(f"\nupload: {UPLOAD_FOLDER}")
     print(f"\noutput: {OUTPUT_FOLDER}\napp.py ends\n")
-    clear_output_folder()  # Only clear if necessary
+    # clear_output_folder()  # Only clear if necessary
     form = UploadForm()
     return render_template("Home.html", form=form, max_content_length=app.config['MAX_CONTENT_LENGTH'] // (1024 * 1024))
 
@@ -128,25 +128,25 @@ def serve_file(filename):
 #         return jsonify({'success': False, 'message': f'Cleanup failed: {str(e)}'}), 500
 
 
-def clear_output_folder():
+# def clear_output_folder():
 
-    # Clear UPLOAD_FOLDER
-    files = glob.glob(os.path.join(UPLOAD_FOLDER, '*'))
-    for file_path in files:
-        try:
-            os.remove(file_path)
-            print(f"\n\nUPLOAD_FOLDER - Deleted file: {file_path}\n\n\n")
-        except Exception as e:
-            print(f"Error deleting file {file_path}: {e}")
+#     # Clear UPLOAD_FOLDER
+#     files = glob.glob(os.path.join(UPLOAD_FOLDER, '*'))
+#     for file_path in files:
+#         try:
+#             os.remove(file_path)
+#             print(f"\n\nUPLOAD_FOLDER - Deleted file: {file_path}\n\n\n")
+#         except Exception as e:
+#             print(f"Error deleting file {file_path}: {e}")
 
-    # Clear OUTPUT_FOLDER
-    files = glob.glob(os.path.join(OUTPUT_FOLDER, '*'))
-    for file_path in files:
-        try:
-            os.remove(file_path)
-            print(f"\n\nOUTPUT_FOLDER - Deleted file: {file_path}\n\n\n")
-        except Exception as e:
-            print(f"Error deleting file {file_path}: {e}")
+#     # Clear OUTPUT_FOLDER
+#     files = glob.glob(os.path.join(OUTPUT_FOLDER, '*'))
+#     for file_path in files:
+#         try:
+#             os.remove(file_path)
+#             print(f"\n\nOUTPUT_FOLDER - Deleted file: {file_path}\n\n\n")
+#         except Exception as e:
+#             print(f"Error deleting file {file_path}: {e}")
 
 
 if __name__ == "__main__":
@@ -154,7 +154,7 @@ if __name__ == "__main__":
         os.makedirs(app.config['UPLOAD_FOLDER'])
     if not os.path.exists(app.config['OUTPUT_FOLDER']):
         os.makedirs(app.config['OUTPUT_FOLDER'])
-    clear_output_folder()
+    # clear_output_folder()
     # os.system("cls")
     # Get the port from the environment variable PORT or use 5000 as the default
     app.run(debug=True)
