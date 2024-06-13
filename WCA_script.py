@@ -1130,13 +1130,14 @@ def main(filepath,BASE_DIR):
         if (len(daily_msg_count_filtered) > 0):
 
             graphs.daily_msg_plot_1(daily_msg_count_filtered)
+            return True
             graphs.daily_msg_logT_plot_2(daily_msg_count_filtered)
             graphs.daily_msg_hist_plot_3(total_msg_per_day)
             graphs.daily_msg_box_plot_4(daily_msg_count_filtered)
         # print("\n\ndone with the graphs now 1-4")
         # time.sleep(5)
         # input("\nEnter to Continue")
-        # return True
+        return True
         """step - 7"""
         # 2.
         hourly_msg_count, monthly_msg_count = hourly_FA(df)
